@@ -1,0 +1,27 @@
+{
+    "name": "has_O365_License",
+    "type": "lookup",
+    "attributes": {
+        "requiresPeriodicRefresh": true,
+        "input": {
+            "type": "firstValid",
+            "attributes": {
+                "values": [
+                    {
+                        "attributes": {
+                            "accountPropertyFilter": "(memberOf.contains(\"O365_Licensing_Tier\"))",
+                            "attributeName": "sAMAccountName",
+                            "sourceName": "Active Directory - Dev"
+                        },
+                        "type": "accountAttribute"
+                    },
+                    "FALSE"
+                ]
+            }
+        },
+        "table": {
+            "FALSE": "false",
+            "default": "true"
+        }
+    }
+}
