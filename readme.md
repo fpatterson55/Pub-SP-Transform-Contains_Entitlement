@@ -1,3 +1,6 @@
+Product: SailPoint Identity Security Cloud
+Feature: Transform
+
 This transform evaluates an Active Directory Group membership to see if it is present. If it is, it will return a value of true otherwise it will return false.
 
 Possible use cases: 
@@ -6,7 +9,6 @@ Possible use cases:
     synchronized to the Help Desk Connected System.
 
 Steps to modify in the template and identity profile:
-
 1) Change the name field to match your use Case / purpose, representing the transform name to be shown in the Identity Profile Mapping.
 2) Modify the memberOf.contains to match the AD group naming that applies. If your group name is "All Managers" you would modify it to be:
     "(memberOf.contains(\"All Managers\"))",
