@@ -1,5 +1,6 @@
 Product: SailPoint Identity Security Cloud
-Feature: Transform
+
+Feature: Transform - To detect an existing entitlement.
 
 This transform evaluates an Active Directory Group membership to see if it is present. If it is, it will return a value of true otherwise it will return false.
 
