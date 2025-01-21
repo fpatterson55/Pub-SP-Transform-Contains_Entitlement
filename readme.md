@@ -10,6 +10,8 @@ Possible use cases:
 1) A transform needs to evaluate if a specific entitlement is currently present on a user. 
 2) Helpdesk needs to quickly evaluate if persons have an O365 license which is based on an AD group membership without having to lookup in AD. This data is 
     synchronized to the Help Desk Connected System.
+3) An report or certification needs data based on a specific entitlement being available.
+
 
 Steps to modify in the template and identity profile:
 1) Change the name field to match your use Case / purpose, representing the transform name to be shown in the Identity Profile Mapping.
