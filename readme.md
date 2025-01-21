@@ -1,11 +1,11 @@
 This transform evaluates an Active Directory Group membership to see if it is present. If it is, it will return a value of true otherwise it will return false.
 
 Possible use cases: 
-1) A transform needs to evaluate logic to see if an entitlement is currently present on a user. 
+1) A transform needs to evaluate if a specific entitlement is currently present on a user. 
 2) Helpdesk needs to quickly evaluate if persons have an O365 license which is based on an AD group membership without having to lookup in AD. This data is 
-    synchronized to the users ServiceNow Profile.
+    synchronized to the Help Desk Connected System.
 
-Steps:
+Steps to modify in the template and identity profile:
 
 1) Change the name field to match your use Case / purpose, representing the transform name to be shown in the Identity Profile Mapping.
 2) Modify the memberOf.contains to match the AD group naming that applies. If your group name is "All Managers" you would modify it to be:
@@ -14,7 +14,7 @@ Steps:
 4) Create the Identity Mapping attribute if it is not already present. After creating the transform, apply the transform to the Identity Mapping and preview the change on a few users.
 
 
-
+```
 {
     "name": "has_O365_License",
     "type": "lookup",
@@ -42,3 +42,4 @@ Steps:
         }
     }
 }
+```
