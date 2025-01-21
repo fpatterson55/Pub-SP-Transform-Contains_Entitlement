@@ -11,7 +11,8 @@ Steps to modify in the template and identity profile:
 2) Modify the memberOf.contains to match the AD group naming that applies. If your group name is "All Managers" you would modify it to be:
     "(memberOf.contains(\"All Managers\"))",
 3) Modify the sourceName row to the name of your Source specific to the environment in your tenant.
-4) Create the Identity Mapping attribute if it is not already present. After creating the transform, apply the transform to the Identity Mapping and preview the change on a few users.
+4) If the output needs to be something other than "true" or "false", modify the table in the transform with the proper values.
+5) Create the Identity Mapping attribute if it is not already present. After creating the transform, apply the transform to the Identity Mapping and preview the change on a few users.
 
 
 ```
